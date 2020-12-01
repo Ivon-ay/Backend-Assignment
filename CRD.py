@@ -20,7 +20,6 @@ def json_validator(data):
     except ValueError as error:
         return False
 
-
 #Create operation
 def create(key,value,timeout=0):
     if key.isalpha():
@@ -46,7 +45,6 @@ def create(key,value,timeout=0):
     else:
         print(CRED +"Error: Invalid key. Characters in the key should only be alphabets."+ CEND) # error message if key is not a string of alphabets only
 
-
 #Read operation
 def read(key):
     if key in data_file:
@@ -59,7 +57,6 @@ def read(key):
             print(CRED + "Error: Time-To-Live for '" + key + "', has expired." + CEND)#if current time exceeds time-to-live property value
     else:
         print(CRED +"Error: key '"+key+"', is not found in the database."+ CEND)
-
 
 #Delete operation
 def delete(key):
